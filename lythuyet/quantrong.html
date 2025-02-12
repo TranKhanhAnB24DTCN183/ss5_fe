@@ -1,0 +1,197 @@
+<!--
+2. Cách liên kết CSS(Inline, Internal, External):
+	Inline: <div style="color: red;">Text</div>
+    Internal: <style>h1 { color: blue; }</style>
+    External: <link rel="stylesheet" href="styles.css">
+3. Màu sắc (Colors)	Sử dụng tên màu, mã HEX, RGB, RGBA, HSL, HSLA:
+	color: #FF5733;
+    background-color: rgba(0, 0, 0, 0.5);
+4. Text properties(Định dạng văn bản: căn chỉnh, biến đổi, trang trí, khoảng cách):	
+    -Căn chỉnh văn bản (Text Alignment):
+        text-align: left;	Căn trái (mặc định).
+        text-align: right;	Căn phải.
+        text-align: center;	Căn giữa.
+        text-align: justify;	Căn đều hai bên.
+    - Kiểu chữ hoa/thường (Text Transform):
+        text-transform: none;	Giữ nguyên văn bản.
+        text-transform: uppercase;	Viết hoa toàn bộ chữ.
+        text-transform: lowercase;	Viết thường toàn bộ chữ.
+        text-transform: capitalize;	Viết hoa chữ cái đầu mỗi từ.
+    -Khoảng cách giữa các chữ, dòng (Spacing):
+        letter-spacing: 2px;	Tăng khoảng cách giữa các chữ cái.
+        word-spacing: 5px;	Tăng khoảng cách giữa các từ.
+        line-height: 1.5;	Điều chỉnh khoảng cách giữa các dòng.
+    -Trang trí văn bản (Text Decoration):
+        text-decoration: none;	Không có trang trí.
+        text-decoration: underline;	Gạch chân.
+        text-decoration: line-through;	Gạch ngang.
+        text-decoration: overline;	Gạch trên.
+    -Kiểu dáng văn bản (Font Style):
+        font-style: normal;	Kiểu chữ mặc định.
+        font-style: italic;	Chữ nghiêng.
+        font-style: oblique;	Chữ nghiêng nhẹ.
+    -Độ đậm của chữ (Font Weight):
+        font-weight: normal;	Độ dày mặc định.
+        font-weight: bold;	Chữ đậm.
+        font-weight: lighter;	Chữ mỏng hơn.
+        font-weight: 100 - 900;	Độ dày theo số.
+    -Kích thước chữ (Font Size):
+        font-size: 16px;	Kích thước theo pixel.
+        font-size: 120%;	Theo phần trăm kích thước gốc.
+        font-size: 1.5em;	Theo đơn vị em (relative).
+        font-size: 2rem;	Theo đơn vị rem (tương đối với <html>).
+    -Bóng chữ (Text Shadow):
+        Cấu trúc:	text-shadow: x y blur color;(Vi du: text-shadow: 2px 2px 5px gray;)
+            x	Độ lệch ngang.
+            y	Độ lệch dọc.
+            blur	Độ mờ của bóng.
+            color	Màu của bóng.
+    -Hướng viết văn bản (Writing Mode):
+        writing-mode: horizontal-tb;	Mặc định (ngang).
+        writing-mode: vertical-rl;	Dọc từ phải sang trái.
+        writing-mode: vertical-lr;	Dọc từ trái sang phải.
+    -Dấu gạch dưới khoảng trắng (White Space):
+        white-space: normal;	Mặc định (xuống dòng khi cần).
+        white-space: nowrap;	Không xuống dòng.
+        white-space: pre;	Giữ nguyên khoảng trắng.
+    - Cắt văn bản dài (Text Overflow):
+        text-overflow: clip;	Cắt ngang văn bản.
+        text-overflow: ellipsis;	Hiển thị dấu ... khi văn bản quá dài.
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.5;
+5. Font properties(Quản lý font chữ: kích thước, kiểu font, độ đậm):
+    -Chọn kiểu chữ (font-family):
+        p {
+        font-family: "Arial", "Helvetica", sans-serif;
+        }
+    -Kích thước chữ (font-size):
+        p {
+        font-size: 18px;
+        }
+    -Độ đậm chữ (font-weight):
+        h1 {
+        font-weight: bold;
+        }
+        p {
+        font-weight: 300;
+        }
+    -Kiểu chữ (font-style):
+        p {
+        font-style: italic;
+        }
+    -Độ co giãn chữ (font-stretch):
+        p {
+        font-stretch: expanded;
+        }
+    -Khoảng cách giữa chữ (letter-spacing):
+        p {
+        letter-spacing: 2px;
+        }
+    -Khoảng cách giữa từ (word-spacing):
+        p {
+        word-spacing: 4px;
+        }
+    -Chiều cao dòng (line-height):
+        p {
+        line-height: 1.6;
+        }
+    -Rút gọn toàn bộ (font):
+        (italic → Chữ nghiêng.
+        bold → Độ đậm.
+        16px/1.5 → Cỡ chữ 16px, chiều cao dòng 1.5.
+        "Arial", sans-serif → Font chữ chính + fallback.)
+        p {
+        font: italic bold 16px/1.5 "Arial", sans-serif;
+        }
+6. Selectors(Universal, ID, Class, Group, Descendant, Adjacent):
+    /* Universal Selector - Chọn tất cả phần tử */
+    * { margin: 0; padding: 0; }  
+
+    /* ID Selector - Chọn phần tử có ID cụ thể */
+    #header { color: blue; }  
+
+    /* Class Selector - Chọn phần tử có class cụ thể */
+    .text { font-size: 18px; }  
+
+    /* Group Selector - Gom nhóm nhiều selector */
+    h1, h2, h3 { font-weight: bold; }  
+
+    /* Descendant Selector - Chọn phần tử bên trong phần tử khác */
+    div p { color: red; }  
+
+    /* Adjacent Selector - Chọn phần tử ngay sau phần tử khác */
+    h1 + p { font-style: italic; }  
+
+7. Attribute Selectors(Chọn phần tử dựa vào thuộc tính):
+    /* Chọn input có type là text */
+    input[type="text"] { color: red; border: 1px solid blue; }  
+
+    /* Chọn thẻ a có chứa thuộc tính target */
+    a[target] { text-decoration: none; }  
+
+    /* Chọn input có thuộc tính value chứa chữ "submit" */
+    input[value~="submit"] { background-color: green; }  
+8. Pseudo-class	(Chọn trạng thái của phần tử):
+    /* Khi di chuột vào thẻ a */
+    a:hover { color: green; }  
+
+    /* Chọn các hàng lẻ trong bảng */
+    tr:nth-child(odd) { background-color: #f2f2f2; }  
+
+    /* Chọn input đang được focus */
+    input:focus { border: 2px solid orange; }  
+
+9. Pseudo-element(Chọn một phần cụ thể của phần tử):
+    /* Chữ cái đầu tiên trong đoạn văn */
+    p::first-letter { font-size: 24px; color: red; }  
+
+    /* Thêm nội dung trước một phần tử */
+    h1::before { content: "🔥 "; color: orange; }  
+
+    /* Thêm nội dung sau một phần tử */
+    h1::after { content: " ✅"; color: green; }  
+
+10. Backgrounds	(Tùy chỉnh nền với màu, ảnh, hoặc gradient):
+    /* Ảnh nền + Không lặp + Căn giữa */
+    body { background: url("image.jpg") no-repeat center/cover; }  
+
+    /* Gradient từ đỏ sang xanh */
+    div { background: linear-gradient(to right, red, blue); }  
+
+11. Borders	(Tùy chỉnh viền với màu, kiểu, độ dày):
+    /* Viền đen 2px dạng solid */
+    div { border: 2px solid black; }  
+
+    /* Bo tròn góc 10px */
+    button { border-radius: 10px; }  
+
+12. Box Model(Bao gồm margin, border, padding, content):
+    .box {
+    margin: 10px;
+    padding: 15px;
+    box-sizing: border-box; /* Giữ kích thước không đổi */
+    }
+
+13. Display & Positioning(Điều khiển bố cục phần tử trên trang):
+    /* Ẩn phần tử */
+    .hidden { display: none; }  
+
+    /* Flexbox căn giữa */
+    .flex-container { display: flex; justify-content: center; align-items: center; }  
+
+    /* Định vị phần tử */
+    .absolute { position: absolute; top: 10px; left: 20px; }  
+
+14. Flexbox	Căn chỉnh phần tử linh hoạt.	display: flex; justify-content: center; align-items: center;
+15. Grid Layout	Bố cục lưới hiện đại, tiện lợi cho layout phức tạp.	display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+16. Media Queries	Responsive cho thiết bị khác nhau.	@media (max-width: 768px) { body { background-color: lightblue; } }
+17. Animation	Tạo hiệu ứng động trong giao diện.	@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+animation: fadeIn 2s;
+18. Specificity	(Thứ tự ưu tiên trong CSS: Inline > ID > Class > Element):
+    p { color: blue !important; } /* !important sẽ ghi đè mọi thứ */
+    1️⃣ Inline Styles (style="color: red;") → Cao nhất.
+    2️⃣ ID Selector (#header)
+    3️⃣ Class, Attribute, Pseudo-class (.text, [type="text"], :hover)
+    4️⃣ Element Selector (p, h1, div)
+-->

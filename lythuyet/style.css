@@ -1,0 +1,29 @@
+ul{
+    background-color: aquamarine;
+}
+ul{
+    background-color: beige;
+}
+*{
+    font-size: 30px;
+}
+#header{
+    background-color: brown;
+    color: tomato;
+}
+.conter{
+    background-color: brown;
+    color: darkgoldenrod;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(154, 32, 154)
+    transition: background-color 1s, transform 1s;
+  }
+  
+  .box:hover {
+    background-color: pink;
+    transform: scale(1.2);
+  }
+  

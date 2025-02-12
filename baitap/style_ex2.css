@@ -1,0 +1,17 @@
+/* .Messi{
+ object-fit: cover;
+
+ width: 100%;
+}
+
+.Ronaldo{
+ object-fit: cover;
+ width: 100%;
+} */
+
+img{
+    width: 70%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+}
